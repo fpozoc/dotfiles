@@ -70,6 +70,8 @@ alias si="sinfo -o '%8P %10n %.11T %.4c %.8z %.6m %12G %10l %10L %10O %20E' -S '
 alias sq="squeue -Su -o '%8i %10u %20j %4t %5D %20R %15b %3C %7m %11l %11L'"
 alias squ="sq -u `id -un`"
 alias sst='sstat --format=JobID,NTasks,AveCPU,AveCPUFreq,AveRSS,MaxRSS -j'
+alias sri='srun --mem=8GB -c 2 -t 120 --pty /bin/bash'
+alias sria='srun --mem=32GB -c 4 -t 240 --pty /bin/bash'
 
 function summarize-user {
     check_time=$(date +%Y-%m-%d -d "7 days ago")
